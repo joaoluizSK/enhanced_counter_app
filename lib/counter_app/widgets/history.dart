@@ -13,6 +13,34 @@ class HistoryWidget extends StatefulWidget {
 }
 
 class _HistoryWidget extends State<HistoryWidget> {
+  late ListView list = buildList();
+
+  ListView buildList() {
+    return ListView.separated(
+      scrollDirection: Axis.horizontal,
+      itemCount: widget.increaseHistory.length,
+      itemBuilder: (_, index) {
+        return Text(
+          '${widget.increaseHistory[index]}',
+        );
+      },
+      separatorBuilder: (_, __) {
+        return const SizedBox(
+          width: 10,
+        );
+      },
+    );
+  }
+
+  @override
+  void didUpdateWidget(covariant HistoryWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+
+    if (widget.increaseHistory.length != oldWidget.increaseHistory.length) {
+      list = buildList();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -28,20 +56,7 @@ class _HistoryWidget extends State<HistoryWidget> {
             child: SizedBox(
               height: 40,
               width: 40,
-              child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                itemCount: widget.increaseHistory.length,
-                itemBuilder: (_, index) {
-                  return Text(
-                    '${widget.increaseHistory[index]}',
-                  );
-                },
-                separatorBuilder: (_, __) {
-                  return const SizedBox(
-                    width: 10,
-                  );
-                },
-              ),
+              child: list,
             ),
           ),
         ),
