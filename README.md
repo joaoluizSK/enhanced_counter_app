@@ -1,16 +1,3 @@
-# enhanced_counter_app
+# Chapter Number 1 from Cross-Plarform UIs with Flutter
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+More information here: https://www.amazon.com.br/Cross-Platform-UIs-Flutter-ability-multiplatform-ebook/dp/B0B12Q2CT7/ref=sr_1_1?keywords=cross-platform+uis+with+flutter&qid=1678382321&sprefix=cross+plat%2Caps%2C279&sr=8-1
